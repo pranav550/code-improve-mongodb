@@ -1,0 +1,7 @@
+use demos;
+
+db.users.update({name:"test1"},{$set:{age:"31"}});
+
+db.users.update({name:"test1@gmail.com"},{$set:{age:30}});
+
+db.users.find({name:"test"},{$set:{age:28}},{multi:true})

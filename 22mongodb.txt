@@ -1,0 +1,18 @@
+//import = mongorestore
+//export 
+
+// all database export
+mongodump
+
+// single database
+mongodump --db database name
+
+// single collection
+mongodumb --db database name --collection collection name
+mongodumb -d database name -c collection name
+
+// import 
+// dump under file name also final
+mongorestore --db final dump/final
+
+mongorestore --db mydbname --collection mycollection dump/mydbname/mycollection.bson

@@ -1,0 +1,37 @@
+use demos
+
+show collections
+
+db.users.find();
+
+db.users.find().pretty();
+
+db.users.find({email:"test@gmail.com"}).pretty()
+
+db.users.find({$or:[{name:'test1'},{email:'test@gmail.com'}]}).pretty();
+
+db.users.find({$and:[{name:'test1'},{email:'test1@gmail.com'}]}).pretty();
+
+db.users.find({age:{$lt:'25'}}).pretty();
+
+db.users.find({age:{$lte:'21'}}).pretty();
+
+db.users.find({age:{$gt:'21'}}).pretty();
+
+db.users.find({age:{$gte:'21'}}).pretty();
+
+//like
+db.users.find({email:/test/}).pretty()
+
+//in
+db.users.find({age:{$in:['23', '24', '26']}}).pretty()
+
+//nor
+db.users.find({$nor:[{name:/test/}]})
+
+//not 
+db.users.find({age:{$not:{$lt:"26"}}}).pretty()
+
+db.users.find({name:"test2",$or:[{age:"24"}]}).pretty()
+
+

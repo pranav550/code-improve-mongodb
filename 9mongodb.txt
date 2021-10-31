@@ -1,0 +1,7 @@
+db.users.remove({name:"test"}); // 1 or multiple record deleted
+
+db.users.remove({name:"test"},1); // only 1 record deleted 
+
+db.users.deleteOne({name:"test"});
+
+db.users.deleteMany({name:test});

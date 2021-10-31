@@ -1,0 +1,16 @@
+mongodb aggregate framework
+
+$project -> $match -> $group -> $sort ->output
+
+$count , $skip, $unwind
+
+db.users.aggregate([
+   {stage 1}, $project,
+      {stage 2}, $match,
+         {stage 3}, $group,
+             {stage 4}, $sort
+
+])
+
+db.users.aggregate([{$match:{'status':'inactive'}}]).pretty()
+

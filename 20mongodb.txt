@@ -1,0 +1,7 @@
+// group // match 
+
+db.users.aggreate([
+{$match:{$in:['HR','TECH']}},
+{$group:{_id:'$department',tot:{$sum:$marks}}}
+{$match:{tot:170}}
+])

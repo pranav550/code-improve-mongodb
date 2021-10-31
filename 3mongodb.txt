@@ -1,0 +1,7 @@
+use codes;
+
+db.users.insert({name:'test'});
+
+show collections
+
+db.dropDatabase()

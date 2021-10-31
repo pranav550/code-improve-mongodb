@@ -1,0 +1,4 @@
+db.users.find().limit(3);
+db.users.find().limit(3).skip(1);
+db.users.find().sort({name:1})---asecnding order;
+db.users.find().sort({name:-1})---desending order

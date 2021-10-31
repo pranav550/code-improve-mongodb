@@ -1,0 +1,6 @@
+// array unwind
+
+db.users.aggreate([{$unwind:"$language"},{$match:{status:'inactive'}},{$project:{name:1, language:1}}]).pretty()
+
+
+db.users.aggreate([{$unwind:"$language"},{$group:{_id:'$language'}}])

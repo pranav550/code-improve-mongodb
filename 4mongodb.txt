@@ -1,0 +1,5 @@
+use demos;
+
+db.createCollection("users");
+
+db.users.drop();

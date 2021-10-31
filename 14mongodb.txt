@@ -1,0 +1,9 @@
+group => groupBy
+
+db.users.aggregate([{$group:{'_id':'$department'}}]);
+
+db.users.aggregate([{$group:{'_id':'department',totalMarks:{$sum:'$marks'}}}])
+
+db.users.aggregate([$group:{'_id':'$department' avgMarks:{$avg:'$marks'}}])
+
+db.users.aggregate([$group:{'_id':{age:'$age',gender:'$gender'}}])

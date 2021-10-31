@@ -1,0 +1,12 @@
+use demos;
+
+db.createCollection("users");
+
+db.users.insert([{name:"test",email:"test@gmail.com"},{name:"test1",email:"test1@gmail.com"} ] });
+
+db.users.insertOne({name:"test2",email:"test2@gmail.com"});
+
+db.insertMany([{name:"test3", email:"test3@gmail.com"},{name:"test4", email:"test4@gmail.com"}])
+
+
+Note: insertOne and insertMany return ObjectID but insert not give id

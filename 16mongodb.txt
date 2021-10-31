@@ -1,0 +1,12 @@
+project => projection 
+
+db.users.aggregate([{$match:{status:'active'}},{$project:{name:1. email:1, _id:0}}])
+
+// alias name
+db.users.aggregate([{$match:{status:'active'}},{$project:{fullname:'$name', emailId:'$email', _id:0}}])
+
+// type
+db.users.aggregate([{$match:{status:'active'}},{$project:{fullname:{$type:'$name'}, emailId:{$type:'$email'}, _id:0}}])
+
+
+

@@ -1,0 +1,4 @@
+db.users.find({"address,pincode":"212121"}).pretty();
+
+db.users.find({"social":{$elemMatch:{"name":"YouTube"}}}).pretty()
+

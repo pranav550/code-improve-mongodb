@@ -1,0 +1,5 @@
+db.users.distinct('department')
+
+db.users.distinct('age',{"status":"active"})
+
+db.users.find("status":"active").count()

@@ -1,0 +1,15 @@
+1)free and opensource
+2)no sql/non relational database
+3)JSON like document schema
+4)BSON (Binary Javascript Object Notation)
+5)collection and document/table and row
+6)use like chat & real time app
+
+
+
+
+
+
+use dbs;
+exit;
+show dbs;

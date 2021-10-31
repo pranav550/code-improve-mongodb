@@ -1,0 +1,1 @@
+db.users.aggregate([{$match:{status:'active'}}, {$limit:1}]).pretty()
